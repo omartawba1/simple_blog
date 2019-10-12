@@ -1,0 +1,7 @@
+<div class="nav-footer has-text-right">
+    <p><i>
+        {% for tag in tags %}
+        <a href="{% url 'post_list_by_tag' tag.slug %}"><b>{{ tag.name }}</b>, </a>
+        {% endfor %}
+    </i></p>
+</div>

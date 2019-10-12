@@ -1,0 +1,78 @@
+{% load blog_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/bulma.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bulma.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+</head>
+<body>
+<!-- body content -->
+<div class="main-content">
+    <div class="container ">
+        <div class="columns is-multiline is-mobile is-centered">
+            <div class="column 3 is-narrow">
+                <div class="nav-header">
+                    <h3 class="title is-3">Blog</h3>
+                    <h4 class="subtitle is-4"><i>It's a simple blog made by Django.</i></h4>
+                </div>
+                <hr/>
+                <!-- navigation -->
+                <aside class="menu">
+                    <p class="menu-label">
+                        <a href="{% url 'post_list' %}">Home Page</a>
+                    <p>This is my blog. I've written {% total_posts %} posts so far.</p>
+                    <p><a href="{% url 'post_feed'%}">Subscribe to my RSS feed</a></p>
+                    <h2>Latest posts</h2>
+                    {% show_latest_posts 3 %}
+                </aside>
+                <!-- end navigation -->
+                <hr/>
+                <!-- post categories -->
+                {% tags %}
+                <!-- end post categories -->
+            </div>
+
+            <!-- posts column -->
+            <div class="column is-٧ is-offset-1 is-centered">
+                {% block content %}{% endblock content %}<!--  end of post column -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of body content -->
+
+<!-- footer: will stick at the bottom -->
+<div class="footer">
+    <div class="container has-text-centered">
+        <div class="nav-center">
+            <a class="nav-item" href="">
+	    <span class="icon">
+	      <i class="fa fa-twitter"></i>
+	    </span>
+            </a>
+            <a class="nav-item" href="">
+	    <span class="icon">
+	      <i class="fa fa-facebook"></i>
+	    </span>
+            </a>
+            <a class="nav-item" href="">
+	    <span class="icon">
+	      <i class="fa fa-instagram"></i>
+	    </span>
+            </a>
+            <a class="nav-item" href="">
+	    <span class="icon">
+	      <i class="fa fa-linkedin"></i>
+	    </span>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- end of footer -->
+</body>
+</html>
