@@ -8,9 +8,8 @@ You can find here modules for `blog` , `comments` , `tags`
 
 
 ## Screen capture
-
-[![Django simple blog](https://ibb.co/6YKdGmM)](https://ibb.co/6YKdGmM)
-[![Django simple blog](https://ibb.co/10XRK0t)](https://ibb.co/10XRK0t)
+[![Django simple blog](https://i.ibb.co/6YKdGmM/screencapture-127-0-0-1-8000-blog-2019-09-12-test2-2019-10-12-20-50-21.png)](https://ibb.co/6YKdGmM)
+[![Django simple blog](https://i.ibb.co/10XRK0t/screencapture-127-0-0-1-8000-blog-2019-10-12-20-50-42.png)](https://ibb.co/10XRK0t)
 
 ## Installation Steps
 
